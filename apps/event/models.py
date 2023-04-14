@@ -1,4 +1,5 @@
 from django.db import models
+
 from apps.common.models import BaseModel
 
 
@@ -10,7 +11,6 @@ class Event(BaseModel):
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     is_active = models.BooleanField(default=True)
-
 
     def __str__(self):
         return self.title
