@@ -12,5 +12,10 @@ class Event(BaseModel):
     end_date = models.DateTimeField()
     is_active = models.BooleanField(default=True)
 
+    class Meta:
+        verbose_name = "Event"
+        verbose_name_plural = "Events"
+        db_table = "event"
+
     def __str__(self):
         return self.title

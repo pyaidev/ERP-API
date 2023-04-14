@@ -22,7 +22,7 @@ from core.schema import swagger_urlpatterns
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("events/", include("apps.event.urls")),
+    path("api/v1/", include("apps.urls")),
 ]
 urlpatterns += swagger_urlpatterns
 

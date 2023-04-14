@@ -1,0 +1,12 @@
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path
+
+from core.schema import swagger_urlpatterns
+
+urlpatterns = [
+    path("events/", include("apps.event.urls")),
+    path("projects/", include("apps.project.urls")),
+    path("interships/", include("apps.intership.urls")),
+]

@@ -41,6 +41,7 @@ CUSTOM_APPS = [
     "apps.event",
     "apps.staf",
     "apps.inventory",
+    "apps.atendance",
 ]
 
 THIRD_PARTY_APPS = [

@@ -7,11 +7,11 @@ from .generator import BothHttpAndHttpsSchemaGenerator
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Site API",
+        title="ERP API",
         default_version="v1",
-        description="Api",
+        description="ERP Api",
         terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="info@uic.group"),
+        contact=openapi.Contact(email="mashrapov3030@gmail.com"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
