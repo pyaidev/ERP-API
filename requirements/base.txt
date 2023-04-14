@@ -9,3 +9,4 @@ django-filter
 pre-commit
 phonenumbers
 django-phonenumber-field
+django-treasuremap
