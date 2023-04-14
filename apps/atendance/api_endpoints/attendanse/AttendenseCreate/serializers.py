@@ -3,7 +3,6 @@ from datetime import datetime, time
 from rest_framework import serializers
 
 from apps.atendance.models import Attendance
-from apps.staf.models import Staff
 
 
 class AttendanceSerializer(serializers.ModelSerializer):
@@ -29,6 +28,4 @@ class AttendanceSerializer(serializers.ModelSerializer):
         else:
             validated_data["status"] = "vahtida kelgan"
 
-        # if delta.total_seconds()> 0:
-        #     validated_data['status'] = "Late"
         return Attendance.objects.create(**validated_data)
