@@ -5,8 +5,8 @@ from .models import Attendance
 
 @admin.register(Attendance)
 class AttendanceAdmin(admin.ModelAdmin):
-    list_display = ["staf", "status"]
-    list_display_links = ["staf", "status"]
-    list_filter = ["staf", "status"]
-    search_fields = ["staf", "status"]
+    list_display = ["staff", "status"]
+    list_display_links = ["staff", "status"]
+    list_filter = ["staff", "status"]
+    search_fields = ["staff", "status"]
     list_per_page = 10

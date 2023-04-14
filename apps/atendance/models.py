@@ -10,10 +10,11 @@ from .choises import STATUS
 
 
 class Attendance(BaseModel):
-    staf = models.ForeignKey(Staff, on_delete=models.CASCADE)
-    status = models.CharField(max_length=100, choices=STATUS, default="kelmadi")
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
+    status = models.CharField(max_length=100, choices=STATUS)
+    date = models.DateField()
+    time = models.TimeField()
+    delta_time = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
         verbose_name = "Attendance"
@@ -22,4 +23,4 @@ class Attendance(BaseModel):
         ordering = ["-created_at"]
 
     def __str__(self):
-        return self.staf.name
+        return self.staff.name
