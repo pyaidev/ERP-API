@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 from apps.common.models import BaseModel
 
@@ -6,7 +7,7 @@ from apps.common.models import BaseModel
 class Staff(BaseModel):
     name = models.CharField(max_length=255)
     email = models.EmailField()
-    phone = models.CharField(max_length=255)
+    phone = PhoneNumberField(region="UZ")
     position = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
 

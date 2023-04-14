@@ -9,13 +9,15 @@ from apps.staf.models import Staff
 class AttendanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attendance
-        fields = ("id", "staff", "date", "time", "status", "delta_time", "created_at", "updated_at")
+        fields = ("id", "staff", "created_at", "updated_at")
 
     def create(self, validated_data):
         print(validated_data)
         delta = str(datetime.now() - datetime.combine(datetime.today(), time(1, 20)))
         print(delta)
         # delta in minutes
+        validated_data["date"] = datetime.today()
+        validated_data["time"] = f"{datetime.now().hour}:{datetime.now().minute}:{datetime.now().second}"
         if "-" not in str(delta):
             hour, minutes = map(int, delta.split(":")[:2])
 

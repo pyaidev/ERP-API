@@ -7,3 +7,5 @@ drf-yasg
 djangorestframework
 django-filter
 pre-commit
+phonenumbers
+django-phonenumber-field
