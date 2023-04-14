@@ -1,6 +1,8 @@
 from rest_framework import generics
-from .serializers import EventDeleteSerializer
+
 from apps.event.models import Event
+
+from .serializers import EventDeleteSerializer
 
 
 class EventApiDeleteView(generics.DestroyAPIView):
@@ -8,6 +10,3 @@ class EventApiDeleteView(generics.DestroyAPIView):
     queryset = Event.objects.all()
 
     lookup_field = "slug"
-
-
-

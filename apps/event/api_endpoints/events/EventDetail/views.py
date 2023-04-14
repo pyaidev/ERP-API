@@ -1,6 +1,8 @@
 from rest_framework import generics
-from .serializers import EventDetailSerializer
+
 from apps.event.models import Event
+
+from .serializers import EventDetailSerializer
 
 
 class EventApiDetail(generics.RetrieveAPIView):
@@ -8,4 +10,3 @@ class EventApiDetail(generics.RetrieveAPIView):
     serializer_class = EventDetailSerializer
 
     lookup_field = "slug"
-
