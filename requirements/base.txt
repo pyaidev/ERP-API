@@ -11,3 +11,6 @@ phonenumbers
 django-phonenumber-field
 django-treasuremap
 django-celery-results
+django-celery-beat
+python-decouple
+redis
