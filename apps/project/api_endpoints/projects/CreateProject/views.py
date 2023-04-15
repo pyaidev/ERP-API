@@ -10,3 +10,6 @@ class CreateProjectApiView(generics.CreateAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectCreateSerializer
     permission_classes = [IsAdminUser]
+
+
+__all__ = ["CreateProjectApiView"]

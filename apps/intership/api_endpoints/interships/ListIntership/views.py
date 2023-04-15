@@ -11,3 +11,6 @@ class IntershipListApiView(generics.ListAPIView):
 
     def get_queryset(self):
         return Internship.objects.filter(is_active=True)
+
+
+__all__ = ["IntershipListApiView"]

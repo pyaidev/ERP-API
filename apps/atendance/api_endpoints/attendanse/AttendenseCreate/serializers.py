@@ -8,11 +8,11 @@ from apps.atendance.models import Attendance
 class AttendanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attendance
-        fields = ("id", "staff", "created_at", "updated_at")
+        fields = ("id", "staff", 'delta_time', "created_at", "updated_at")
 
     def create(self, validated_data):
         print(validated_data)
-        delta = str(datetime.now() - datetime.combine(datetime.today(), time(1, 20)))
+        delta = str(datetime.now() - datetime.combine(datetime.today(), time(10, 00)))
         print(delta)
         # delta in minutes
         validated_data["date"] = datetime.today()

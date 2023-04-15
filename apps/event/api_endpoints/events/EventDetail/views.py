@@ -10,3 +10,6 @@ class EventApiDetail(generics.RetrieveAPIView):
     serializer_class = EventDetailSerializer
 
     lookup_field = "slug"
+
+
+__all__ = ["EventApiDetail"]

@@ -10,3 +10,6 @@ class EventApiCreate(generics.CreateAPIView):
     queryset = Event.objects.all()
     serializer_class = EventCreateSerializer
     permission_classes = [IsAdminUser]
+
+
+__all__ = ["EventApiCreate"]

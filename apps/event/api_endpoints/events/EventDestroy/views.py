@@ -10,3 +10,6 @@ class EventApiDeleteView(generics.DestroyAPIView):
     queryset = Event.objects.all()
 
     lookup_field = "slug"
+
+
+__all__ = ["EventApiDeleteView"]

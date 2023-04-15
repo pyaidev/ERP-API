@@ -10,3 +10,6 @@ class StaffDeleteApiView(generics.DestroyAPIView):
     serializer_class = StaffSerializer
     lookup_field = "id"
     permission_classes = (permissions.IsAdminUser,)
+
+
+__all__ = ["StaffDeleteApiView"]

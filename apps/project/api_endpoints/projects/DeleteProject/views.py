@@ -11,3 +11,6 @@ class DeleteProjectApiView(generics.DestroyAPIView):
     serializer_class = ProjectDeleteSerializer
     permission_classes = [IsAdminUser]
     lookup_field = "slug"
+
+
+__all__ = ["DeleteProjectApiView"]

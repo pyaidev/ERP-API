@@ -10,3 +10,6 @@ class StaffCreateApiView(generics.ListCreateAPIView):
     permission_classes = (permissions.IsAdminUser,)
     queryset = Staff.objects.all()
     serializer_class = StaffSerializer
+
+
+__all__ = ["StaffCreateApiView"]

@@ -11,3 +11,6 @@ class EventApiUpdate(generics.UpdateAPIView):
     serializer_class = EventSerializerUpdate
     lookup_field = "slug"
     permission_classes = [IsAdminUser]
+
+
+__all__ = ["EventApiUpdate"]

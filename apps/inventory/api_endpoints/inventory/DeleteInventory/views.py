@@ -10,3 +10,6 @@ class InventoryDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = InventorySerializer
     queryset = Inventory.objects.all()
     lookup_field = "id"
+
+
+__all__ = ["InventoryDeleteApiView"]

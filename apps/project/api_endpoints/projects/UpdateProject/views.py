@@ -11,3 +11,6 @@ class UpdateProjectApiView(generics.UpdateAPIView):
     serializer_class = ProjectUpdateSerializer
     permission_classes = [IsAdminUser]
     lookup_field = "slug"
+
+
+__all__ = ["UpdateProjectApiView"]

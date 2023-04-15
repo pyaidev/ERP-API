@@ -9,3 +9,6 @@ class DetailIntershipVIew(generics.RetrieveAPIView):
     queryset = Internship.objects.all()
     serializer_class = IntershipDetailSerializer
     lookup_field = "slug"
+
+
+__all__ = ["DetailIntershipVIew"]
