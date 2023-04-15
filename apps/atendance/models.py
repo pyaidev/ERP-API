@@ -8,7 +8,7 @@ from .choises import STATUS
 
 class Attendance(BaseModel):
     staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
-    status = models.CharField(max_length=100, choices=STATUS)
+    status = models.CharField(max_length=100, choices=STATUS, default="kelmadi")
     date = models.DateField()
     time = models.TimeField()
     delta_time = models.CharField(max_length=100, blank=True, null=True)

@@ -6,6 +6,8 @@ from .serializers import AttendanceSerializer
 
 
 class AttendanceCreateApiView(generics.CreateAPIView):
+    """Status va delta_time ni avtomatik hisoblaydi"""
+
     queryset = Attendance.objects.all()
     serializer_class = AttendanceSerializer
 
