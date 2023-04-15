@@ -1,5 +1,5 @@
 STATUS = (
     ("kechqoldi", "Kechqoldi"),
-    ("vahtida kelgan", "Vahtida kelgan"),
+    ("vahtida_kelgan", "Vahtida kelgan"),
     ("kelmadi", "Kelmadi"),
 )

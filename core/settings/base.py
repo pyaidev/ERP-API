@@ -44,7 +44,7 @@ CUSTOM_APPS = [
     "apps.atendance",
 ]
 
-THIRD_PARTY_APPS = ["rest_framework", "drf_yasg", "corsheaders", "phonenumber_field"]
+THIRD_PARTY_APPS = ["rest_framework", "drf_yasg", "corsheaders", "phonenumber_field", "django_celery_results"]
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework.authentication.SessionAuthentication",),

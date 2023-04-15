@@ -10,3 +10,4 @@ pre-commit
 phonenumbers
 django-phonenumber-field
 django-treasuremap
+django-celery-results
