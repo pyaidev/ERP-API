@@ -8,7 +8,7 @@ from apps.atendance.models import Attendance
 class AttendanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attendance
-        fields = ("id", "staff", "delta_time", "created_at", "updated_at")
+        fields = ("id", "staff", "status", "delta_time", "created_at", "updated_at")
 
     def create(self, validated_data):
         delta = str(datetime.now() - datetime.combine(datetime.today(), time(11, 00)))
@@ -21,12 +21,15 @@ class AttendanceSerializer(serializers.ModelSerializer):
                 validated_data["status"] = "kechqoldi"
                 validated_data["delta_time"] = f"{hour} soat {minutes} minut"
         else:
+
             validated_data["status"] = "vahtida_kelgan"
+            validated_data[
+                "delta_time"
+            ] = f"Time: {datetime.now().hour}:{datetime.now().minute}:{datetime.now().second}"
 
         return Attendance.objects.create(**validated_data)
 
     def validate(self, attrs):
         if Attendance.objects.filter(staff=attrs["staff"], date=datetime.today()).exists():
-            raise serializers.ValidationError("Siz bugun yo'qlama qilindingiz")
+            raise serializers.ValidationError("Kirishingiz mumkin")
         return attrs
-
