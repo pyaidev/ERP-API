@@ -11,12 +11,12 @@ class DetailStaffSerializer(serializers.Serializer):
     def get_atendances(self, obj):
         attendances = Attendance.objects.filter(staff_id=obj.id)
         data = AttendanceSerializer(attendances, many=True).data
-        # for i in data:
-        #     del i["staff"], i["created_at"], i["updated_at"], i["id"]
+        for i in data:
+            del i["staff"], i["created_at"], i["updated_at"], i["id"]
 
         return data
 
     class Meta:
         model = Staff
 
-        fields = ("id", "name", "email", "position", "atendances")
+        fields = ("id", "staff__title", "email", "position", "atendances")

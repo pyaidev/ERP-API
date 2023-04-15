@@ -11,7 +11,7 @@ class Attendance(BaseModel):
     status = models.CharField(max_length=100, choices=STATUS)
     date = models.DateField()
     time = models.TimeField()
-    delta_time = models.CharField(max_length=100, blank=True, null=True)
+    delta_time = models.CharField(max_length=100, blank=True, null=True, verbose_name="Kechqolgan vaqti")
 
     class Meta:
         verbose_name = "Attendance"

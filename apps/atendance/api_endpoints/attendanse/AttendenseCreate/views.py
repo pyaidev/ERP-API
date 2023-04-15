@@ -12,5 +12,3 @@ class AttendanceCreateApiView(generics.CreateAPIView):
     def get_queryset(self):
         qs = self.queryset
         return qs
-
-

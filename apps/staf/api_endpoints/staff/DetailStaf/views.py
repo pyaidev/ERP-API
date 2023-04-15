@@ -17,4 +17,5 @@ class DetailStafApiView(generics.RetrieveAPIView):
         data = serializer.data
         return Response({"data": data})
 
+
 __all__ = ["DetailStafApiView"]
